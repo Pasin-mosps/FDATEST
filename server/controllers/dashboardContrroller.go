@@ -5,7 +5,6 @@ import (
 
 	"github.com/labstack/echo/v4"
 	"github.com/pasin-mosps/FDATSET/actions"
-	// "github.com/pasin-mosps/FDATSET/models"
 )
 
 func ViewDashBoardAdmin(c echo.Context) error {

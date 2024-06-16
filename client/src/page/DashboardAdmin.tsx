@@ -37,13 +37,10 @@ const AdminDashboard: React.FC = () => {
           throw new Error("Invalid response format");
         }
 
-        // Extracting messages from the first array
         const messagesArray: string[] = response.data[0];
 
-        // Extracting user data from the second array ([username, passwordHash, role])
         const userDataArray: any[] = response.data.slice(1);
 
-        // Mapping the extracted user data to UserDataItem interface
         const formattedUserData: UserDataItem[] = userDataArray.map((item) => ({
           username: item[0],
           passwordHash: item[1],

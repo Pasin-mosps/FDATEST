@@ -29,18 +29,3 @@ func ReadCSV(filename string) [][]string {
 
 	return data
 }
-
-// func getDataHandler(c echo.Context) error {
-// 	user := new(models.User)
-
-// 	// Read data based on role
-// 	var data [][]string
-// 	if user.Role == "admin" {
-// 		data = ReadCSV()("clients.csv")
-// 		data = append(data, ReadCSV()...("admin.csv")...)
-// 	} else {
-// 		data = ReadCSV("clients.csv")
-// 	}
-
-// 	return c.JSON(http.StatusOK, data)
-// }

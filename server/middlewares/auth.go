@@ -56,7 +56,7 @@ func RoleCheck(clientHandler, adminHandler echo.HandlerFunc) echo.HandlerFunc {
 		fmt.Println("role=", user.Role)
 		if user.Role == "admin" {
 			return adminHandler(c)
-		} else if user.Role == "client" { // Assume client is the role name for non-admin users
+		} else if user.Role == "client" {
 			return clientHandler(c)
 		} else {
 			return c.String(http.StatusForbidden, "Access Denied!!!")

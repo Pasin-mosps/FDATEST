@@ -37,9 +37,6 @@ func SignUp(c echo.Context) error {
 	}
 
 	user.Password = string(hashedPassword)
-	// if err := SaveUser(&user); err != nil {
-	// 	return c.String(http.StatusInternalServerError, "Server Error")
-	// }
 
 	file, err := os.OpenFile("clients.csv", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
 	if err != nil {
